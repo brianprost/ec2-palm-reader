@@ -18,7 +18,7 @@
 	];
 </script>
 
-<div class="container h-2/3 mx-auto flex justify-center items-center">
+<div class="container h-full mx-auto flex justify-center items-center">
 	<form on:submit={handleSubmit}>
 		<!-- <input type="text" bind:value={$input} placeholder="Describe your business..." />
 		<button type="submit">Generate Slogan</button> -->
@@ -34,7 +34,9 @@
 				/>
 			</label>
 			<button type="submit" class="btn btn-md variant-filled">I'm Feeling Lucky</button>
-			<p>{$completion}</p>
+			{#if completion}
+				<h3 class="code text-3xl">{$completion}</h3>
+			{/if}
 		</div>
 	</form>
 </div>
