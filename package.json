@@ -41,6 +41,7 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "1.5.4",
+    "@vercel/analytics": "^1.1.1",
     "ai": "^2.2.31",
     "highlight.js": "11.9.0",
     "openai": "^4.24.1"
