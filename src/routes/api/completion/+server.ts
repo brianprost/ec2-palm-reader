@@ -14,9 +14,9 @@ export async function POST({ request }: { request: Request }): Promise<Streaming
 	const { prompt } = await request.json();
 
 	const response = await openai.completions.create({
-		model: 'text-davinci-003',
+		model: 'gpt-3.5-turbo-instruct',
 		stream: true,
-		temperature: 0.6,
+		temperature: 0.1,
 		max_tokens: 300,
 		prompt: `Provide a recommendation for an EC2 instance type that suits the user's criteria. The recommendation should optimize for cost-efficiency while ensuring performance does not fall below the needs specified. Do not provide reasoning behind the choice. Please limit the recommendation to just one instance.
 
